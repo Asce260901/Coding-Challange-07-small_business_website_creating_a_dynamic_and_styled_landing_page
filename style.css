@@ -92,6 +92,7 @@ nav {
 }
 
 .ctabutton:hover {
+    transform: translateY(-1px);
     background-color: #7a5338;
 }
 
@@ -113,8 +114,8 @@ nav {
 }
 
 .service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 18px rgb(0, 0, 0);
 }
 
 .service h3 {
@@ -160,6 +161,7 @@ nav {
 
 .formsection button:hover {
     background-color: #7a5338;
+    transform: translateY(-1px);
 }
 
 footer {
