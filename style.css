@@ -28,6 +28,15 @@ header {
     padding: 15px 20px 5px 20px;
 }
 
+.logo img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0px auto 10px auto;
+    border-radius: 12px;
+    
+}
+
 .logo h1 {
     font-size: 32px;
     margin: 0px;
@@ -80,7 +89,7 @@ nav {
     font-size: 18px;
 }
 
-.ctabutton {
+.ctabton {
     background-color: #5a3e2b;
     color: white;
     border: none;
@@ -91,7 +100,7 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-.ctabutton:hover {
+.ctabton:hover {
     transform: translateY(-1px);
     background-color: #7a5338;
 }
