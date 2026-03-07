@@ -1,0 +1,1 @@
+I made this website as a hw for the business of a friend there are some thing that i will elimiante and others that i will update in the future.
