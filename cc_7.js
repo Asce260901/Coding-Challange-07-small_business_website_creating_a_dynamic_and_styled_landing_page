@@ -36,5 +36,5 @@ updateButton.addEventListener("click", function () {
 });
 
 quoteButton.addEventListener("click", function () {
-    window.location.href = "mailto:jlrupholstery@gmail.com?subject=Free%20Quote%20Request&body=Hello%20JLR%20Upholstery,%20I%20would%20like%20to%20request%20a%20free%20quote.";
+    window.open("mailto:jlrupholstery@gmail.com");
 });

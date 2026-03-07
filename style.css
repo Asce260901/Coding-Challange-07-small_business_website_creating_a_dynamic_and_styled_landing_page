@@ -66,7 +66,7 @@ nav {
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(to right, #d9b382, #f5e6d3);
+    background: linear-gradient(to bottom, #d9b382, #f5e6d3);
 }
 
 .hero h2 {
@@ -102,6 +102,7 @@ nav {
     gap: 20px;
     padding: 40px;
     flex-wrap: wrap;
+    background: linear-gradient(to bottom, #f5e6d3, #f5f1eb)
 }
 
 .service {
@@ -130,7 +131,7 @@ nav {
 .formsection {
     text-align: center;
     padding: 40px 20px;
-    background-color: #fffaf5;
+    background-color: white;
 }
 
 .formsection h2 {
@@ -175,6 +176,42 @@ footer {
 
 #updatecta {
     display: none;
+}
+
+.imagespage {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagespage h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.imagespage div {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.imagespage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.imagespage img:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
