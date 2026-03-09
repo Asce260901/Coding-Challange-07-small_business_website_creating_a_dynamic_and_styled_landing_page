@@ -36,8 +36,7 @@ updateButton.addEventListener("click", function () {
 });
 
 quoteButton.addEventListener("click", function () {
-    window.open(
-        "https://mail.google.com/mail/?view=cm&fs=1&to=jlrupholstery@gmail.com&su=Free%20Estimate%20Request&body=Hello%20JLR%20Upholstery,%0A%0AI%20would%20like%20to%20request%20a%20free%20estimate.",
+    window.location.href=
+        "mailto:jlrupholstery@gmail.com?subject=Free%20Estimate%20Request&body=Hello%20JLR%20Upholstery,%0A%0AI%20would%20like%20to%20request%20a%20free%20estimate.",
         "_blank"
-    );
 });
