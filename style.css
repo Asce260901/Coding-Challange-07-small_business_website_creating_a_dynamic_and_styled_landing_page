@@ -18,7 +18,7 @@ header {
     background: radial-gradient(#5a3e2b, #3e2a1d, black);
     color: white;
     width: 100%;
-    position: sticky;
+    position: static;
     top: 0px;
     z-index: 1000;
 }
