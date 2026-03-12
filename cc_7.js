@@ -1,42 +1,39 @@
 const passwordInput = document.getElementById("passwordinput");
 const unlockButton = document.getElementById("unlockbtn");
 const updateSection = document.getElementById("updatecta");
+const hamburger = document.getElementById("hamburgerbtn");
+const navlinks = document.getElementById("navlinks");
 
-const headlineInput = document.getElementById("headlineinput");
-const updateButton = document.getElementById("updatebtn");
-const ctaHeadline = document.getElementById("ctaheadline");
 const quoteButton = document.getElementById("quotebtn");
+const submitbutton = document.getElementById("submitbtn");
 
-const correctPassword = "JLR2026";
-
-unlockButton.addEventListener("click", function () {
-    const enteredPassword = passwordInput.value.trim();
-
-    if (enteredPassword === correctPassword) {
-        updateSection.style.display = "block";
-        alert("Access granted.");
-    } else {
-        alert("Incorrect password.");
-    }
-
-    passwordInput.value = "";
-});
-
-updateButton.addEventListener("click", function () {
-    const newHeadline = headlineInput.value.trim();
-
-    if (newHeadline !== "") {
-        ctaHeadline.textContent = newHeadline;
-        alert("CTA headline updated.");
-    } else {
-        alert("Please enter a new headline.");
-    }
-
-    headlineInput.value = "";
-});
 
 quoteButton.addEventListener("click", function () {
-    window.location.href=
-        "mailto:jlrupholstery@gmail.com?subject=Free%20Estimate%20Request&body=Hello%20JLR%20Upholstery,%0A%0AI%20would%20like%20to%20request%20a%20free%20estimate.",
-        "_blank"
+   document.location.href = "#contactus";
+});
+
+submitbutton.addEventListener("click", function () {
+    const tname = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+    }
+
+    const mailtoLink = `mailto:jlrupholstery@gmail.com?subject=Free%20Estimate%20Request&body=${message}%0A%0AFrom:%20${tname}%20(Phone:%20${phone})`;
+    window.location.href = mailtoLink;
+});
+
+hamburger.addEventListener("click", function () {
+    navlinks.classList.toggle("open");
+});
+
+
+navlinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navlinks.classList.remove("open");
+    });
 });

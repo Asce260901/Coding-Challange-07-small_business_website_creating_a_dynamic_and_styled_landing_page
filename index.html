@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JLR Upholstery</title>
-    <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-       <div class="logo">
-    <img src="favicon.jpeg" alt="JLR Upholstery Logo">
-    <h1>JLR Upholstery</h1>
-</div>
-        <nav>
-            <ul class="navlinks">
+         <nav>
+            <ul class="navlinks" id="navlinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#previouswork">Previous Work</a></li>
-                <li><a href="#adminaccess">Admin Access</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li id="noref"><a href="#adminaccess">Admin Access</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
             </ul>
         </nav>
+
+       <div class="logo">
+    <img src="icons/logo_white.png" alt="JLR Upholstery Logo">
+    <h1>JLR Upholstery</h1>
+    <button class="hamburger" id="hamburgerbtn">
+             <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </header>
 
     <main id="home">
@@ -78,6 +83,7 @@
 
         <section id="previouswork" class="imagespage">
             <h2>Previous Work</h2>
+            <div class="gallery-grid">
                 <div><img src="imgs/WhatsApp Image 2026-03-06 at 19.32.29.jpeg" alt="0"></div>
                 <div><img src="imgs/WhatsApp Image 2026-03-06 at 19.32.29 (1).jpeg" alt="1"></div>
                 <div><img src="imgs/WhatsApp Image 2026-03-06 at 19.32.29 (2).jpeg" alt="2"></div>
@@ -104,28 +110,42 @@
                 <div><img src="imgs/WhatsApp Image 2026-03-06 at 19.32.29 (23).jpeg" alt="23"></div>
                 <div><img src="imgs/WhatsApp Image 2026-03-06 at 19.32.29 (24).jpeg" alt="24"></div>
                 <div><img src="imgs/WhatsApp Image 2026-03-06 at 19.32.29 (25).jpeg" alt="25"></div>
+            </div>  
         </section>
     </main>
-
-        <section id="adminaccess" class="formsection">
-            <h2>Admin Access</h2>
-            <p>
-                Enter the password to access the CTA update section.
-            </p>
-            <input type="text" id="passwordinput" placeholder="Enter Password">
-            <button id="unlockbtn">Unlock</button>
+    
+        <section id="contactus" class="formsection">
+            <h2>Contact Us</h2>
+            <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required class="input" placeholder="Your Name">
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required class="input" pattern="[0-9]{10}" placeholder="e.g. 3051234567">
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+            <br>
+            <button type="submit" id="submitbtn">Submit</button>
+        </form>
         </section>
-        
-        <section id="updatecta" class="formsection">
-            <h2>Update the CTA Headline</h2>
-            <input type="text" id="headlineinput" placeholder="Enter a new headline">
-            <button id="updatebtn">Update Headline</button>
-        </section>
+    
+    <footer>
+        <h2>Contact Information</h2>
+        <ul class="contactinfo">
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:jlrupholstery@gmail.com">jlrupholstery@gmail.com</a></li>
+            <li><i class="fa-solid fa-mobile-screen"></i><a href="sms:+13054076857">+1 (305) 407-6857</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=6915+N+Clearview+Ave+Tampa+FL+33614" target="_blank">6915 N Clearview Ave Tampa Fl 33614</a></li>
+        </ul>
+<br>
 
-    <footer id="contact">
-        <p>
-            Contact us: jlrupholstery@gmail.com | Tampa Bay Area, Fl | +(305) 407-6857  
-        </p>
+           <h2>Follow us on social media:</h2>
+           <ul class="socialmedia">
+                <li><a href="https://www.facebook.com/JLRUpholstery" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/jlr_tapiceria/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@jlrodriguez90" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+           </ul>
+
         <p>&copy; 2026 JLR Upholstery. All rights reserved.</p>
     </footer>
     <script src="cc_7.js"></script>
